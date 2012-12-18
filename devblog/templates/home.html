@@ -1,0 +1,19 @@
+{% extends 'blog.html' %}
+
+{% block blog_content %}
+    {% for blog_post in blog_posts %}
+        <article{% if forloop.last %} class="last-article"{% else %} class="std-article"{% endif %}>
+            {% include 'article.html' with blog_post=blog_post word_count=blog_post.atj_word_count %}
+        </article>
+    {% endfor %}
+    <div class="post-nav">
+    {% if next_post_index > 0 %}
+        <a href="{{request.path}}?start={{next_post_index}}">Newer Posts</a>
+    {% elif next_post_index == 0 %}
+        <a class="next-post-link" href="{{request.path}}">Newer Posts</a>
+    {% endif %}
+    {% if prev_post_index > 0 %}
+        <a class="prev-post-link" href="{{request.path}}?start={{prev_post_index}}">Older Posts</a>
+    {% endif %}
+    </div>
+{% endblock blog_content %}

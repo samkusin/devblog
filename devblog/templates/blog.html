@@ -1,0 +1,62 @@
+{% extends 'sitebase.html' %}
+
+{% block html_body %}
+{% include 'header.html' %}
+
+<div class="main-body">
+    <div id="sidebar">
+        <section class="sidebar-box">
+            <article>
+                <h3>About</h3>
+                <p>An engineer in the gaming industry since 1996 who is just now discovering the world of independent game development.</p>
+            </article>
+        </section>
+        <section class="sidebar-box">
+            <ul class="social-bar">
+                <li><a href="{% url rss-latest %}"><img src="{{STATIC_URL}}img/rss_small.png"/></a></li>
+                <li><a href="https://twitter.com/samsinx"><img src="{{STATIC_URL}}img/twit_small.png"/></a></li>
+            </ul>
+        </section>
+        <section class="sidebar-box">
+            <h3>Archives</h3>
+            <p>
+                <div id="archive-tree"></div>
+            </p>
+        </section>
+    {% if blogroll %}
+        <section class="sidebar-box">
+            <h3>Favorite Sites</h3>
+            <p>
+                <ul class="text-list">
+                {% for site in blogroll %}
+                    <li><a href="{{site.url}}">{{site.title}}</a></li>
+                {% endfor %}
+                </ul>
+            </p>
+        </section>
+    {% endif %}
+    </div>
+    <div class="content-body">
+        <div class="content-body-column">
+        {% block blog_content %}{% endblock blog_content %}
+        </div>
+    </div>
+</div>
+
+{% include 'footer.html' %}
+
+<script>
+    var nodes = [{% include 'archive_js.html' with archives=archives.archives %}];
+    var $tree = $('#archive-tree')
+    $tree.tree({
+        data: nodes,
+        autoEscape: false,
+        autoOpen: false,
+        selectable: true 
+    });
+
+    var first_archive_node = $tree.tree('getNodeById', {{ first_post_id }});
+    $tree.tree('selectNode', first_archive_node);
+</script>
+
+{% endblock html_body %}

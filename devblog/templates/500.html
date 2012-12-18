@@ -1,0 +1,13 @@
+{% extends 'sitebase.html' %}
+
+{% block html_body %}
+{% include 'header.html' %}
+
+<div class="main-body">
+    <p style="text-align: center;">Sorry, the page you requested appears to be having some problems.</p>
+    <p style="text-align: center;"><a href="{% url metablog_home %}">Return to home page</a></p>
+</div>
+
+{% include 'footer.html' %}
+
+{% endblock html_body %}
