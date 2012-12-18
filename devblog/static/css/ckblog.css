@@ -1,0 +1,233 @@
+/*
+    ckblog.css
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    width: 100%;
+    background-image: url('/static/img/bkgtile.jpg');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    padding-bottom: 1em;
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+    color: #366;
+    font-weight: bold;
+}
+
+h1, h2, h3 {
+  /*  font-family: 'Lucida Console', 'Monaco', monospace;
+  */
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    font-weight: bold;
+}
+
+.header-title {
+    color: #000;
+}
+
+.social-button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+.social-bar {
+    list-style-type: none;
+    margin: 0.25em 0;
+}
+
+.social-bar li {
+    display: inline-block;
+    margin-right: 0.5em;
+}
+
+.text-list {
+    line-height: 1.1em;
+}
+
+header[role="banner"] {
+    width: 940px;
+    margin: 1em auto;
+}
+
+header[role="banner"] hgroup {
+    text-align: left;
+}
+
+header[role="banner"] h1 {
+   font-size: 3em;
+   font-weight: bold;
+   margin: 0.25em 0;
+}
+
+header[role="banner"] h2 {
+    font-size: 1.25em;
+}
+
+footer {
+    margin: 1em auto;
+    width: 940px;
+}
+
+footer p {
+    font-size: 0.9em;
+    text-align: center;
+}
+
+#main-menu {
+    width: 100%;
+    background-color: #066;
+}
+
+#main-menu ul {
+    width: 940px;
+    margin: 0 auto;
+    list-style-type: none;
+}
+#main-menu li {
+    display: inline-block;
+    padding: 1em;
+    margin-right: 2em;
+}
+
+li.main-menu-selected {
+    background-color: #099;
+}
+
+#main-menu li a {
+    font-weight: normal;
+    color: #fc6;
+}
+
+#main-menu li a:hover {
+    color: #fff;
+}
+
+.main-body {
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+#sidebar {
+    width: 32%;
+    float: left;
+}
+
+.sidebar-box {
+    background-color: #7dd;
+    margin: 1em 1em 1em 0;
+    -moz-border-radius: .5em;
+    -webkit-border-radius: .5em;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;   
+}
+
+.sidebar-box h3 {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.sidebar-box p {
+    font-size: 0.9em;
+    line-height: 1.2em;
+}
+.sidebar-box a {
+    font-size: 0.9em;
+}
+
+.content-body {
+    width: 68%;
+    float: right;
+}
+
+.content-body-column {
+    border-left: 1px dotted #000;
+    padding: 0 1em;
+}
+
+.blog-post {
+    margin: 1em auto;
+    padding: 0.5em 0; 
+}
+
+.blog-post .post-header {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.blog-post .post-time {
+    font-size: 0.9em;
+}
+
+.blog-post h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.blog-post .body {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.blog-post .body a {
+    color: #960;
+    text-decoration: none;
+}
+
+.blog-post .body a:hover {
+    text-decoration: underline;
+}
+
+.blog-post .body p {
+    line-height: 1.2em;
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.blog-post aside {
+    margin: 1em 0;
+    padding: 0.5em 0.75em;
+    -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    border-radius: 0.5em;
+    background-color: #fc6;
+}
+
+.blog-post aside p {
+    font-size: 0.9em;
+    margin: 0.25em 0;    
+}
+
+.article-social {
+    margin: 0.25em 0;
+    list-style-type: none;
+}
+.article-social li {
+    font-size: 0.9em;
+    display: inline-block;
+    margin-right: 0.5em;
+    vertical-align: middle;
+}
+
+.post-nav {
+    overflow: hidden;
+    margin: 1em 0;
+    width: 100%;
+}
+.next-post-link {
+    float: left;
+}
+.prev-post-link {
+    float: right;
+}

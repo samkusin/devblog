@@ -1,0 +1,17 @@
+{% for item in archives %}
+{
+    label: '<a href="{{ item.uri|safe }}">{{ item.key }} ({{ item.count }})</a>',
+  {% if item.archives %}
+    children: 
+    [   
+        {% with template_name="archive_js.html" %}
+        {% include template_name with archives=item.archives %}
+        {% endwith %}
+    ],
+  {% elif item.articles %}
+    children:
+    [ {%for article in item.articles %}
+        { label: '<a href="{{ article.uri|safe }}">+ {{ article.title }}</a>', id: {{ article.id }} },
+    {% endfor %}]
+  {% endif %}
+},{% endfor %}

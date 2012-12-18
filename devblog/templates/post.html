@@ -1,0 +1,7 @@
+{% extends 'blog.html' %}
+
+{% block blog_content %}
+    <article class="std-article">
+        {% include 'article.html' with blog_post=blog_post %}
+    </article>
+{% endblock blog_content %}

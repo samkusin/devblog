@@ -1,0 +1,14 @@
+<header role="banner">
+    <hgroup>
+        <h1><a class="header-title" href="{% url metablog_home %}">{{ ck_site_title }}</a></h1>
+        <h2>An exploration in Games and Software Development</h2>
+    </hgroup>
+</header>
+<nav id="main-menu">
+    <ul>
+        <li{% if not selected_category %} class="main-menu-selected"{%endif%}><a href="{% url metablog_home %}">All</a></li>
+    {% for category in categories %}
+        <li{% if selected_category == category %} class="main-menu-selected"{%endif%}><a href="{{ category.get_absolute_url }}">{{ category }}</a></li>
+    {% endfor %}
+    </ul>
+</nav>

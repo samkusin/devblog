@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Blog" lang="en">
+<head>
+  <title>{{ page_title }}</title>
+  <link rel="alternate" type="application/rss+xml" title="Coder Ex Gamer article feed" href="{{request.path}}rss"/>
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/ckblog.css">
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/jqtree.css">
+  {% block html_head_css %}{% endblock html_head_css %}
+{% comment %}
+  html5.js : allows us to use basic HTML5 markup for pages loading on earlier
+    IE browsers (<article>,<header>,<section>, etc...)
+{% endcomment %}
+{% if ck_local_js_libraries %}
+<!--[if lt IE 9]>
+  <script src="{{ STATIC_URL }}js/html5shiv.js"></script>
+<![endif]-->
+  <script src="{{ STATIC_URL }}js/jquery-1.7.2.js"></script>
+{% else %}
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+{% endif %}
+  <script src="{{ STATIC_URL }}js/tree.jquery.js"></script>
+  <script id="twitter-wjs" src="//platform.twitter.com/widgets.js"></script>
+  {% block html_head %}{% endblock html_head %}
+</head>
+<body>{% block html_body %}{% endblock html_body %}</body>
+</html>
