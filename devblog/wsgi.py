@@ -14,7 +14,9 @@ framework.
 
 """
 import os
+import site
 
+site.addsitedir('/opt/django/projs/devblog/site/lib/python2.6/site-packages')
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "devblog.settings")
 
 # This application object is used by any WSGI server configured to use this
