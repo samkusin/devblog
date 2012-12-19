@@ -1,6 +1,8 @@
 {% extends 'sitebase.html' %}
+{% load disqus_tags %}
 
 {% block html_head %}
+{% comment %}Google Analytics and Webmaster Tools{% endcomment %}
 {% if debug != True %}
 <script>
   var _gaq = _gaq || [];
@@ -14,6 +16,8 @@
   })();
 </script>
 {% endif %}
+
+{% disqus_dev %}
 {% endblock html_head %}
 
 

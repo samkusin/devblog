@@ -172,9 +172,11 @@ INSTALLED_APPS = (
     # 'tracking',
     # text editor
     'ckeditor',
+    # Disqus commenting (django-disqus)
+    'disqus',
     # blog app
     'cinekine.metablog',
-     # local apps
+    # local apps
     'devblog'
 )
 
@@ -219,3 +221,10 @@ CKEDITOR_CONFIGS = {
         'height': 320,
     }
 }
+
+
+###############################################################################
+# DISQUS SETTINGS
+
+DISQUS_API_KEY = 'QUfzIeg85vnglA9TBjIdLqN5RlWUTA0XeFiD0i8st3Tuk1xOL3flvMQRVIKpPlLJ'
+DISQUS_WEBSITE_SHORTNAME = 'coderxgamer'
