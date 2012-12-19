@@ -127,6 +127,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 MIDDLEWARE_CLASSES = (
+    'tracking.middleware.BannedIPMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -134,6 +135,9 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'tracking.middleware.VisitorTrackingMiddleware',
+    'tracking.middleware.VisitorCleanUpMiddleware',
+
 )
 
 ROOT_URLCONF = 'devblog.urls'
@@ -161,8 +165,11 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     # Sitemap
     'django.contrib.sitemaps',
-    # Other Apps
+
+    # database
     'south',
+    # tracking
+    'tracking',
     # text editor
     'ckeditor',
     # blog app
@@ -212,3 +219,10 @@ CKEDITOR_CONFIGS = {
         'height': 320,
     }
 }
+
+
+###############################################################################
+# TRACKING SETTINGS
+
+TRACKING_CLEANUP_TIMEOUT = 672   # 4 weeks
+
