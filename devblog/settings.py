@@ -17,6 +17,9 @@ CK_LOCAL_JS_LIBRARIES = True
 # Number of posts to display per page.
 CK_METABLOG_PER_PAGE_COUNT = 5
 
+# Ping google on publishing a post
+CK_METABLOG_PING_GOOGLE = True
+
 
 ###############################################################################
 # Django settings for devblog project.
@@ -156,6 +159,9 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
+    # Sitemap
+    'django.contrib.sitemaps',
+    # Other Apps
     'south',
     # text editor
     'ckeditor',
