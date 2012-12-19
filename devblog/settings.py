@@ -8,6 +8,9 @@ PROJECT_ROOT_PATH = os.path.abspath(os.path.join(ROOT_PATH, '..'))
 GLOBAL_ROOT_PATH = '/Users/Samir/Documents/Development/django_sites/'
 sys.path.insert(0, os.path.join(GLOBAL_ROOT_PATH, "packages"))
 
+# Used for google analytics
+GOOGLE_ANALYTICS_ID = 'UA-37150583-1'
+
 # Title of Blog
 CK_SITE_TITLE = 'Coder Ex Gamer'
 
@@ -127,7 +130,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 MIDDLEWARE_CLASSES = (
-    'tracking.middleware.BannedIPMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -135,8 +137,6 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'tracking.middleware.VisitorTrackingMiddleware',
-    'tracking.middleware.VisitorCleanUpMiddleware',
 
 )
 
@@ -169,7 +169,7 @@ INSTALLED_APPS = (
     # database
     'south',
     # tracking
-    'tracking',
+    # 'tracking',
     # text editor
     'ckeditor',
     # blog app
@@ -219,10 +219,3 @@ CKEDITOR_CONFIGS = {
         'height': 320,
     }
 }
-
-
-###############################################################################
-# TRACKING SETTINGS
-
-TRACKING_CLEANUP_TIMEOUT = 672   # 4 weeks
-
