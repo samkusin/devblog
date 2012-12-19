@@ -14,7 +14,7 @@
     <aside>
         <ul class="article-social">
             <li>Posted {{blog_post.post_date|date:"h:i A"}}<li>
-            <li><a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ blog_post.get_absolute_url }}" data-via="samsinx"></a></li>
+            <li><a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ request.build_absolute_uri|urlencode }}{{ blog_post.get_absolute_url }}" data-via="samsinx"></a></li>
         </ul>
     </aside>
 </div>
