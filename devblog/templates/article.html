@@ -1,3 +1,4 @@
+{% load disqus_tags %}
 <div class="blog-post">
     <header class="post-heading">
         <h1><a class="header-title" href="{{ blog_post.get_absolute_url }}">{{blog_post.title}}</a></h1>
@@ -16,5 +17,9 @@
             <li>Posted {{blog_post.post_date|date:"h:i A"}}<li>
             <li><a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ request.build_absolute_uri|urlencode }}{{ blog_post.get_absolute_url }}" data-via="samsinx"></a></li>
         </ul>
+    {% if show_thread_link %}
+        <a class="article-disqus-link" href="{{ blog_post.get_absolute_url }}#disqus_thread" data-disqus-identifier="{{ blog_post.id }}">View comments</a>
+        {% disqus_num_replies %}
+    {% endif %}
     </aside>
 </div>

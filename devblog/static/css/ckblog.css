@@ -219,6 +219,9 @@ li.main-menu-selected {
     margin-right: 0.5em;
     vertical-align: middle;
 }
+a.article-disqus-link {
+    font-size: 0.9em;
+}
 
 .post-nav {
     overflow: hidden;
