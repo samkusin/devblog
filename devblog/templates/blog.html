@@ -25,7 +25,7 @@
         <section class="sidebar-box">
             <article>
                 <h3>About</h3>
-                <p>An engineer in the gaming industry since 1996 who is just now discovering the world of independent game development.</p>
+                {% include 'about.html' %}
             </article>
         </section>
         <section class="sidebar-box">
@@ -75,4 +75,5 @@
     var first_archive_node = $tree.tree('getNodeById', {{ first_post_id }});
     $tree.tree('selectNode', first_archive_node);
 </script>
+{% block blog_script %}{% endblock blog_script %}
 {% endblock html_body %}
