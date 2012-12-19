@@ -9,6 +9,7 @@
 *.pyc
 /log/*.log
 /tmp
+/local
 /media
 /static
 .DS_Store
