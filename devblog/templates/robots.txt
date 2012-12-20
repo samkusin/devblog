@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /editor
+Disallow: /static
 
 Sitemap: http://coderxgamer.com/sitemap.xml
