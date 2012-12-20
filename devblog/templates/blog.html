@@ -3,7 +3,7 @@
 
 {% block html_head %}
 {% comment %}Google Analytics and Webmaster Tools{% endcomment %}
-{% if debug != True %}
+{% if not debug %}
 <script>
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-37150583-1']);
@@ -16,7 +16,6 @@
   })();
 </script>
 {% endif %}
-
 {% disqus_dev %}
 {% endblock html_head %}
 
