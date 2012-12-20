@@ -2,11 +2,13 @@
 <html itemscope itemtype="http://schema.org/Blog" lang="en">
 <head>
   <title>{{ page_title }}</title>
+{% if allow_rss_feed %}
   <link rel="alternate" type="application/rss+xml" title="Coder Ex Gamer article feed" href="{{request.path}}rss/"/>
+{% endif %}
   <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
   <link rel="stylesheet" href="{{ STATIC_URL }}css/ckblog.css">
   <link rel="stylesheet" href="{{ STATIC_URL }}css/jqtree.css">
-  {% block html_head_css %}{% endblock html_head_css %}
+  {% block html_head_links %}{% endblock html_head_links %}
 {% comment %}
   html5.js : allows us to use basic HTML5 markup for pages loading on earlier
     IE browsers (<article>,<header>,<section>, etc...)
