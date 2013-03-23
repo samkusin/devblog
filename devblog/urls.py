@@ -33,21 +33,18 @@ def post_priority(post):
 
 sitemaps = {
     'blog': GenericSitemap(
-                {
-                    'queryset': Post.query([Post.PUBLISHED, Post.EXCLUSIVE]),
-                    'date_field': 'post_date',
-                },
-                priority=post_priority
-            ),
+        {
+            'queryset': Post.query([Post.PUBLISHED, Post.EXCLUSIVE]),
+            'date_field': 'post_date',
+        },
+        priority=post_priority
+    ),
 }
 
 
 # URLs
 
 urlpatterns = patterns('',
-    # CKEditor
-    url(r'^ckeditor/', include('ckeditor.urls')),
-
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 

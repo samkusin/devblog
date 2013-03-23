@@ -171,7 +171,7 @@ INSTALLED_APPS = (
     # tracking
     # 'tracking',
     # text editor
-    'ckeditor',
+    'wysihtml5',
     # Disqus commenting (django-disqus)
     'disqus',
     # blog app
@@ -213,14 +213,8 @@ LOGGING = {
 ###############################################################################
 # CKEDITOR SETTINGS
 
-CKEDITOR_UPLOAD_PATH = MEDIA_ROOT
-CKEDITOR_CONFIGS = {
-    'edit_post': {
-        'toolbar': 'Full',
-        'width': 640,
-        'height': 320,
-    }
-}
+WYSIHTML5_ALLOWED_TAGS = ('h1 h2 h3 h4 h5 h6 div p b i u'
+                          ' ul ol li span img a blockquote pre code samp')
 
 
 ###############################################################################
