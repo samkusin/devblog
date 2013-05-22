@@ -225,9 +225,12 @@ footer p {
 .blog-post .body ul {
     margin: 0.5em;
     list-style-type: disc;
-    list-style-position: inside;
+    list-style-position: outside;
 }
 
+.blog-post .body li {
+    margin: 0.25em 1em;
+}
 
 .blog-post aside {
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
