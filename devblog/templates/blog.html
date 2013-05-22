@@ -29,13 +29,11 @@
             <article>
                 <h3>About</h3>
                 {% include 'about.html' %}
+                <ul class="social-bar">
+                    <li><a href="{% url rss-latest %}"><img src="{{STATIC_URL}}img/rss_small.png"/></a></li>
+                    <li><a href="https://twitter.com/samsinx"><img src="{{STATIC_URL}}img/twit_small.png"/></a></li>
+                </ul>
             </article>
-        </section>
-        <section class="sidebar-box">
-            <ul class="social-bar">
-                <li><a href="{% url rss-latest %}"><img src="{{STATIC_URL}}img/rss_small.png"/></a></li>
-                <li><a href="https://twitter.com/samsinx"><img src="{{STATIC_URL}}img/twit_small.png"/></a></li>
-            </ul>
         </section>
         <section class="sidebar-box">
             <h3>Archives</h3>

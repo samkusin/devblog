@@ -3,7 +3,8 @@
 */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    /*font-family: Arial, Helvetica, sans-serif;*/
     font-size: 16px;
     width: 100%;
     background-image: url('/static/img/bkgtile.jpg');
@@ -39,7 +40,7 @@ h1, h2, h3 {
 
 .social-bar {
     list-style-type: none;
-    margin: 0.25em 0;
+    margin-top: 1em;
 }
 
 .social-bar li {
@@ -51,23 +52,27 @@ h1, h2, h3 {
     line-height: 1.1em;
 }
 
-header[role="banner"] {
-    width: 940px;
-    margin: 1em auto;
+#header {
+    width: 100%;
 }
 
-header[role="banner"] hgroup {
+#banner header {
+    width: 940px;
+    margin: 2em auto;
     text-align: left;
 }
 
-header[role="banner"] h1 {
-   font-size: 3em;
-   font-weight: bold;
-   margin: 0.25em 0;
+#banner h1 {
+    /*font-family: "Century Gothic", CenturyGothic, AppleGothic, Arial, Helvetica, sans-serif; */
+    font-size: 1.5em;
+    margin: 0.25em 0;
 }
 
-header[role="banner"] h2 {
-    font-size: 1.25em;
+#banner h2 {
+    /* font-family: "Century Gothic", CenturyGothic, AppleGothic, Arial, Helvetica, sans-serif; */
+    font-size: 0.9em;
+    font-weight: normal;
+    text-transform: uppercase;
 }
 
 footer {
@@ -82,31 +87,38 @@ footer p {
 
 #main-menu {
     width: 100%;
-    background-color: #066;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 0.35em 0;
+    background-color: #1aa;
 }
 
 #main-menu ul {
+    list-style-type: none;
     width: 940px;
     margin: 0 auto;
-    list-style-type: none;
 }
 #main-menu li {
     display: inline-block;
-    padding: 1em;
-    margin-right: 2em;
-}
-
-li.main-menu-selected {
-    background-color: #099;
+    padding-right: 2em;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 1px;
 }
 
 #main-menu li a {
-    font-weight: normal;
+    font-weight: bold;
+    color: #000;
+}
+
+#main-menu li a.selected {
     color: #fc6;
 }
 
 #main-menu li a:hover {
-    color: #fff;
+    color: #fc6;
 }
 
 .main-body {
@@ -117,39 +129,47 @@ li.main-menu-selected {
 }
 
 #sidebar {
-    width: 32%;
+    width: 28%;
     float: left;
 }
 
 .sidebar-box {
-    background-color: #7dd;
-    margin: 1em 1em 1em 0;
+    /*background-color: #7dd;
     -moz-border-radius: .5em;
     -webkit-border-radius: .5em;
     border-radius: 0.5em;
-    padding: 0.5em 1em;   
+    */
+    margin-top: 1em;
+    margin-right: 1em;
+    padding: 0.5em 0em;   
 }
 
 .sidebar-box h3 {
-    font-weight: bold;
+    width: 100%;
+    padding-bottom: 0.5em;
+    border-bottom: 1px dotted #888;
     margin-bottom: 0.5em;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-transform: uppercase;
 }
 
 .sidebar-box p {
     font-size: 0.9em;
     line-height: 1.2em;
+    word-spacing: 2px;
 }
 .sidebar-box a {
     font-size: 0.9em;
 }
 
 .content-body {
-    width: 68%;
+    width: 72%;
     float: right;
 }
 
 .content-body-column {
-    border-left: 1px dotted #000;
+    border-left: 1px dotted #888;
     padding: 0 1em;
 }
 
@@ -164,12 +184,14 @@ li.main-menu-selected {
 }
 
 .blog-post .post-time {
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
     font-size: 0.9em;
 }
 
 .blog-post h1 {
-    font-size: 1.5em;
+    font-size: 1.25em;
     font-weight: bold;
+    text-transform: uppercase;
     margin-bottom: 0.5em;
 }
 
@@ -196,11 +218,12 @@ li.main-menu-selected {
 }
 
 .blog-post aside {
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
     margin: 1em 0;
     padding: 0.5em 0.75em;
-    -moz-border-radius: 0.5em;
-    -webkit-border-radius: 0.5em;
-    border-radius: 0.5em;
+    -moz-border-radius: 0.4em;
+    -webkit-border-radius: 0.4em;
+    border-radius: 0.4em;
     background-color: #fc6;
 }
 
@@ -238,7 +261,7 @@ samp {
     margin-right: 0.5em;
     vertical-align: middle;
 }
-article-disqus-link {
+.article-disqus-link {
     font-size: 0.9em;
 }
 
