@@ -209,6 +209,11 @@ footer p {
     text-decoration: underline;
 }
 
+.blog-post .body h2 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
 .blog-post .body p {
     line-height: 1.2em;
     margin-top: 0.5em;
@@ -216,6 +221,13 @@ footer p {
     margin-bottom: 0.5em;
     padding-bottom: 0.5em;
 }
+
+.blog-post .body ul {
+    margin: 0.5em;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
 
 .blog-post aside {
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
@@ -243,12 +255,12 @@ pre {
 }
 
 code {
-    font-family: "Lucida Console", Monaco, monospace;
+    font-family: "Andale Mono", Consolas, monaco, monospace;
     font-size: 0.95em;
 }
 
 samp {
-    font-family: "Lucida Console", Monaco, monospace;
+    font-family: "Andale Mono", Consolas, monaco, monospace;
 }
 
 .article-social {
