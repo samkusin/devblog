@@ -3,15 +3,14 @@
 */
 
 body {
-    font-family: Georgia, Times, "Times New Roman", serif;
-    /*font-family: Arial, Helvetica, sans-serif;*/
-    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
     width: 100%;
     background-image: url('/static/img/bkgtile.jpg');
     background-repeat: repeat;
     background-attachment: fixed;
     padding-bottom: 1em;
-    color: #000;
+    color: #222;
 }
 
 a {
@@ -21,8 +20,6 @@ a {
 }
 
 h1, h2, h3 {
-  /*  font-family: 'Lucida Console', 'Monaco', monospace;
-  */
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
     font-weight: bold;
 }
@@ -59,18 +56,16 @@ h1, h2, h3 {
 #banner header {
     width: 940px;
     margin: 2em auto;
-    text-align: left;
+    text-align: center;
 }
 
 #banner h1 {
-    /*font-family: "Century Gothic", CenturyGothic, AppleGothic, Arial, Helvetica, sans-serif; */
-    font-size: 1.5em;
+    font-size: 2em;
     margin: 0.25em 0;
 }
 
 #banner h2 {
-    /* font-family: "Century Gothic", CenturyGothic, AppleGothic, Arial, Helvetica, sans-serif; */
-    font-size: 0.9em;
+    font-size: 1.1em;
     font-weight: normal;
     text-transform: uppercase;
 }
@@ -87,24 +82,25 @@ footer p {
 
 #main-menu {
     width: 100%;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
     padding: 0.35em 0;
     background-color: #1aa;
 }
 
 #main-menu ul {
-    list-style-type: none;
     width: 940px;
+    list-style-type: none;
     margin: 0 auto;
+    text-align: center;
 }
 #main-menu li {
     display: inline-block;
-    padding-right: 2em;
+    padding: 0 4em;
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-    text-align: left;
+    text-align: center;
     text-transform: uppercase;
-    font-size: 0.8em;
+    font-size: 0.9em;
     letter-spacing: 1px;
 }
 
@@ -150,7 +146,7 @@ footer p {
     border-bottom: 1px dotted #888;
     margin-bottom: 0.5em;
     font-weight: bold;
-    font-size: 0.9em;
+    font-size: 1em;
     text-transform: uppercase;
 }
 
@@ -189,10 +185,10 @@ footer p {
 }
 
 .blog-post h1 {
-    font-size: 1.25em;
+    font-size: 1.5em;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.75em;
 }
 
 .blog-post .body {

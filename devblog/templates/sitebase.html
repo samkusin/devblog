@@ -7,6 +7,9 @@
 {% endif %}
   <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
   <link rel="stylesheet" href="{{ STATIC_URL }}css/ckblog.css">
+  {% if flavour == "mobile" %}
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/ckblog-m.css">
+  {% endif %}
   <link rel="stylesheet" href="{{ STATIC_URL }}css/jqtree.css">
   <meta name="description" content="Articles on game development and classic gaming.">
   {% block html_head_links %}{% endblock html_head_links %}

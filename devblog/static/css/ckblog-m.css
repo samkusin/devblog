@@ -1,0 +1,47 @@
+/*
+    ckblog-m.css
+*/
+
+body {
+    font-size: 16px;
+    background-image: none;
+    background-color: #fff;
+}
+
+.content-body-mobile {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#banner header {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#banner h1 {
+    font-size: 1,5em;
+}
+
+#banner h2 {
+    font-size: 1em;
+}
+
+#main-menu ul {
+    width: 100%;
+}
+.main-body {
+    width: 100%;
+}
+
+#main-menu li {
+    padding: 0 2em;
+    font-size: 1em;
+}
+
+footer {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}

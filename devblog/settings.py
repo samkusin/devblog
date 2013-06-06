@@ -111,6 +111,7 @@ SECRET_KEY = 'y3#76c-vo!h8+f5!k$fdf5!527bx%(d^*aalfs+h$!9ifwq=bp'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
+    'django_mobile.loader.Loader',
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
 #     'django.template.loaders.eggs.Loader',
@@ -124,9 +125,11 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.static",
     "django.core.context_processors.tz",
     "django.contrib.messages.context_processors.messages",
-    'django.core.context_processors.request',
+    "django.core.context_processors.request",
+    # Django mobile
+    "django_mobile.context_processors.flavour",
     # custom context processors
-    'cinekine.context_processors.config',
+    "cinekine.context_processors.config",
 )
 
 MIDDLEWARE_CLASSES = (
@@ -135,6 +138,8 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'django_mobile.middleware.MobileDetectionMiddleware',
+    'django_mobile.middleware.SetFlavourMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
@@ -174,6 +179,8 @@ INSTALLED_APPS = (
     'wysihtml5',
     # Disqus commenting (django-disqus)
     'disqus',
+    # Mobile detection and template processor
+    'django_mobile',
     # blog app
     'cinekine.metablog',
     # local apps
@@ -211,7 +218,7 @@ LOGGING = {
 
 
 ###############################################################################
-# CKEDITOR SETTINGS
+# WYSIHTML5 SETTINGS
 
 WYSIHTML5_ALLOWED_TAGS = ('h1 h2 h3 h4 h5 h6 div p b i u'
                           ' ul ol li span img a blockquote pre code samp')
@@ -222,3 +229,11 @@ WYSIHTML5_ALLOWED_TAGS = ('h1 h2 h3 h4 h5 h6 div p b i u'
 
 DISQUS_API_KEY = 'QUfzIeg85vnglA9TBjIdLqN5RlWUTA0XeFiD0i8st3Tuk1xOL3flvMQRVIKpPlLJ'
 DISQUS_WEBSITE_SHORTNAME = 'coderxgamer'
+
+###############################################################################
+# MOBILE SETTINGS
+
+FLAVOURS = ('full', 'mobile')
+FLAVOURS_TEMPLATE_PREFIX = 'variants/'
+FLAVOURS_GET_PARAMETER = 'variant'
+FLAVOURS_SESSION_KEY = 'variant'
