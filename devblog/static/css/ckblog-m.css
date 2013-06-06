@@ -3,7 +3,7 @@
 */
 
 body {
-    font-size: 16px;
+    font-size: 11pt;
     background-image: none;
     background-color: #fff;
 }
@@ -14,14 +14,8 @@ body {
     margin-right: auto;
 }
 
-#banner header {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 #banner h1 {
-    font-size: 1,5em;
+    font-size: 1.75em;
 }
 
 #banner h2 {
@@ -31,17 +25,8 @@ body {
 #main-menu ul {
     width: 100%;
 }
-.main-body {
-    width: 100%;
-}
 
 #main-menu li {
     padding: 0 2em;
     font-size: 1em;
-}
-
-footer {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
 }
