@@ -5,7 +5,7 @@
 {% set_disqus_title blog_post.title %}
 {% block blog_content %}
     <article class="std-article">
-        {% include 'article.html' with blog_post=blog_post %}
+        {% include 'article.html' with blog_post=blog_post show_social_link=1 %}
     </article>
     {% disqus_show_comments %}
 {% endblock blog_content %}
