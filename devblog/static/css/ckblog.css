@@ -6,7 +6,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 10pt;
     width: 100%;
-    background-image: url('/static/img/bkgtile.jpg');
+    background-image: url('/static/img/bkgtile.png');
     background-repeat: repeat;
     background-attachment: fixed;
     padding-bottom: 1em;
