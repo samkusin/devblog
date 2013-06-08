@@ -3,9 +3,13 @@
 */
 
 body {
-    font-size: 11pt;
+    font-size: 22pt;
     background-image: none;
     background-color: #fff;
+}
+
+.text-list {
+    line-height: 1.5em;
 }
 
 .content-body-mobile {
@@ -15,11 +19,11 @@ body {
 }
 
 #banner h1 {
-    font-size: 1.75em;
+    font-size: 2.25em;
 }
 
 #banner h2 {
-    font-size: 1em;
+    font-size: 1.25em;
 }
 
 #main-menu ul {
@@ -27,6 +31,15 @@ body {
 }
 
 #main-menu li {
-    padding: 0 2em;
+    padding: 0 1em;
     font-size: 1em;
 }
+
+.blog-post .body p {
+    line-height: 1.5em;
+}
+
+.blog-post .body li {
+    line-height: 1.25em;
+}
+
