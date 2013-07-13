@@ -4,7 +4,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 10pt;
+    font-size: 11pt;
     width: 100%;
     background-image: url('/static/img/bkgtile.png');
     background-repeat: repeat;
@@ -43,10 +43,6 @@ h1, h2, h3 {
 .social-bar li {
     display: inline-block;
     margin-right: 0.5em;
-}
-
-.text-list {
-    line-height: 1.1em;
 }
 
 #header {
@@ -104,7 +100,6 @@ footer p {
     text-align: center;
     text-transform: uppercase;
     font-size: 0.9em;
-    letter-spacing: 1px;
 }
 
 #main-menu li a {
@@ -160,8 +155,8 @@ footer p {
 
 .sidebar-box p {
     font-size: 0.9em;
-    line-height: 1.2em;
-    word-spacing: 2px;
+    line-height: 1.25em;
+    word-spacing: 0.5em;
 }
 .sidebar-box a {
     font-size: 0.9em;
@@ -202,6 +197,7 @@ footer p {
 .blog-post .body {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+    line-height: 1.5em;
 }
 
 .blog-post .body a {
@@ -219,7 +215,6 @@ footer p {
 }
 
 .blog-post .body p {
-    line-height: 1.2em;
     margin-top: 0.5em;
     padding-top: 0.5em;
     margin-bottom: 0.5em;
@@ -234,6 +229,29 @@ footer p {
 
 .blog-post .body li {
     margin: 0.25em 1em;
+    line-height: 1.25em;
+}
+
+.blog-post .body blockquote {
+    margin: 0em 1em;
+    font-style: italic;
+}
+
+.blog-post .body blockquote p {
+    padding-top: 0em;
+    padding-bottom: 0em;
+}
+
+.wysiwyg-text-align-left {
+    text-align: left;
+}
+
+.wysiwyg-text-align-center {
+    text-align: center;
+}
+
+.wysiwyg-text-align-right {
+    text-align: right;
 }
 
 .blog-post aside {
