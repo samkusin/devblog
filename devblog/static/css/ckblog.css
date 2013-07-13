@@ -133,6 +133,10 @@ footer p {
     float: left;
 }
 
+#archive-tree {
+    margin-left: 0.5em;
+}
+
 .sidebar-box {
     /*background-color: #7dd;
     -moz-border-radius: .5em;
