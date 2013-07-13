@@ -4,8 +4,9 @@
 import os
 import sys
 ROOT_PATH = os.path.dirname(__file__)
-PROJECT_ROOT_PATH = os.path.abspath(os.path.join(ROOT_PATH, '..'))
-GLOBAL_ROOT_PATH = '/Users/Samir/Documents/Development/django_sites/'
+SITE_ROOT_PATH = '/opt/django/projs/devblog/'
+GLOBAL_ROOT_PATH = os.path.join(SITE_ROOT_PATH, 'site')
+PROJECT_ROOT_PATH = os.path.join(GLOBAL_ROOT_PATH, 'devblog')
 sys.path.insert(0, os.path.join(GLOBAL_ROOT_PATH, "packages"))
 
 # Used for google analytics
@@ -15,7 +16,7 @@ GOOGLE_ANALYTICS_ID = 'UA-37150583-1'
 CK_SITE_TITLE = 'Coder Ex Gamer'
 
 # Use JS libraries hosted locally
-CK_LOCAL_JS_LIBRARIES = True
+CK_LOCAL_JS_LIBRARIES = False
 
 # Number of posts to display per page.
 CK_METABLOG_PER_PAGE_COUNT = 5
@@ -27,7 +28,7 @@ CK_METABLOG_PING_GOOGLE = True
 ###############################################################################
 # Django settings for devblog project.
 
-DEBUG = True
+DEBUG = False 
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -39,10 +40,10 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'ckblog',                # Or path to database file if using sqlite3.
-        'USER': 'cinekine',              # Not used with sqlite3.
-        'PASSWORD': 'cinekine',          # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
+        'NAME': 'coderx',                # Or path to database file if using sqlite3.
+        'USER': 'coderx',              # Not used with sqlite3.
+        'PASSWORD': 'c0d3rx001',          # Not used with sqlite3.
+        'HOST': 'hitchcock',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
@@ -72,7 +73,7 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = os.path.join(PROJECT_ROOT_PATH, 'media')
+MEDIA_ROOT = os.path.join(SITE_ROOT_PATH, 'media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -83,7 +84,7 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = os.path.join(PROJECT_ROOT_PATH, 'static')
+STATIC_ROOT = os.path.join(SITE_ROOT_PATH, 'static')
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
