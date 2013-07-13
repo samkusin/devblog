@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html itemscope itemtype="http://schema.org/Blog" lang="en">
 <head>
-  <title>{{ page_title }}</title>
+  <title>{% block site_title %}{{ page_title }}{% endblock site_title %}</title>
 {% if allow_rss_feed %}
   <link rel="alternate" type="application/rss+xml" title="Coder Ex Gamer article feed" href="{{request.path}}rss/"/>
 {% endif %}
@@ -11,7 +11,8 @@
   <link rel="stylesheet" href="{{ STATIC_URL }}css/ckblog-m.css">
   {% endif %}
   <link rel="stylesheet" href="{{ STATIC_URL }}css/jqtree.css">
-  <meta name="description" content="Articles on game development and classic gaming.">
+  {% block html_meta %}<meta name="description" content="Articles on game development and classic gaming.">{% endblock html_meta %}
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   {% block html_head_links %}{% endblock html_head_links %}
 {% comment %}
   html5.js : allows us to use basic HTML5 markup for pages loading on earlier

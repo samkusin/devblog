@@ -1,5 +1,7 @@
 {% extends 'blog.html' %}
 
+{% block site_title %}{% if selected_category %}{{selected_category.long_name}} - {%endif %}{% if archive_date %}{% if archive_month %}{{archive_date|date:"F"}} {% endif %}{{archive_date|date:"Y"}} Archives - {% endif %}{{page_title}}{% endblock site_title %}
+
 {% block blog_content %}
     {% for blog_post in blog_posts %}
         <article{% if forloop.last %} class="last-article"{% else %} class="std-article"{% endif %}>
