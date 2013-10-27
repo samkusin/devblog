@@ -8,6 +8,7 @@ from cinekine.metablog.models import Post
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
+from filebrowser.sites import site
 
 admin.autodiscover()
 
@@ -45,14 +46,15 @@ sitemaps = {
 # URLs
 
 urlpatterns = patterns('',
+    url(r'^grappelli/', include('grappelli.urls')),
+    url(r'^editor/filebrowser/', include(site.urls)),
     # Uncomment the admin/doc line below to enable admin documentation:
-    url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    url(r'^editor/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
     url(r'^editor/', include(admin.site.urls)),
 
     url(r'', include('cinekine.metablog.urls')),
-
     url(r'^robots\.txt$', TextPlainView.as_view(template_name='robots.txt')),
     url(r'^favicon\.ico$', RedirectView.as_view(url='/static/img/favicon.ico')),
     url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),

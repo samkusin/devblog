@@ -162,6 +162,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
+    'grappelli.dashboard',
+    'grappelli',
+    'filebrowser',
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
@@ -174,6 +177,7 @@ INSTALLED_APPS = (
     # 'tracking',
     # text editor
     'wysihtml5',
+
     # Disqus commenting (django-disqus)
     'disqus',
     # Mobile detection and template processor
@@ -213,6 +217,7 @@ LOGGING = {
     }
 }
 
+GRAPPELLI_INDEX_DASHBOARD = 'dashboard.CustomIndexDashboard'
 
 ###############################################################################
 # WYSIHTML5 SETTINGS
