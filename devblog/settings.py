@@ -5,7 +5,7 @@ import os
 import sys
 ROOT_PATH = os.path.dirname(__file__)
 PROJECT_ROOT_PATH = os.path.abspath(os.path.join(ROOT_PATH, '..'))
-GLOBAL_ROOT_PATH = '/Users/Samir/Documents/Development/django_sites/'
+GLOBAL_ROOT_PATH = '/Users/samir/Development/django_sites/'
 sys.path.insert(0, os.path.join(GLOBAL_ROOT_PATH, "packages"))
 
 # Title of Blog
