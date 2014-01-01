@@ -10,6 +10,7 @@
   {% if flavour == "mobile" %}
   <link rel="stylesheet" href="{{ STATIC_URL }}css/ckblog-m.css">
   {% endif %}
+  <link href="{{ STATIC_URL }}lightbox/css/lightbox.css" rel="stylesheet" />
   <link rel="stylesheet" href="{{ STATIC_URL }}css/jqtree.css">
   {% block html_meta %}<meta name="description" content="Articles on game development and classic gaming.">{% endblock html_meta %}
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -22,15 +23,15 @@
 <!--[if lt IE 9]>
   <script src="{{ STATIC_URL }}js/html5shiv.js"></script>
 <![endif]-->
-  <script src="{{ STATIC_URL }}js/jquery-1.7.2.js"></script>
 {% else %}
 <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 {% endif %}
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
   <script src="{{ STATIC_URL }}js/tree.jquery.js"></script>
   <script id="twitter-wjs" src="//platform.twitter.com/widgets.js"></script>
+  <script src="{{ STATIC_URL }}lightbox/js/lightbox-2.6.min.js"></script>
   {% block html_head %}{% endblock html_head %}
 </head>
 <body>{% block html_body %}{% endblock html_body %}</body>
