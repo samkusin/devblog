@@ -177,6 +177,7 @@ INSTALLED_APPS = (
     # 'tracking',
     # text editor
     'wysihtml5',
+    #'django_summernote',
 
     # Disqus commenting (django-disqus)
     'disqus',
@@ -222,9 +223,14 @@ GRAPPELLI_INDEX_DASHBOARD = 'dashboard.CustomIndexDashboard'
 ###############################################################################
 # WYSIHTML5 SETTINGS
 
-WYSIHTML5_ALLOWED_TAGS = ('h1 h2 h3 h4 h5 h6 div p b i u'
+WYSIHTML5_ALLOWED_TAGS = ('h1 h2 h3 h4 h5 h6 div p b i u figure figcaption'
                           ' ul ol li span img a blockquote pre code samp')
 
+WYSIHTML5_EDITOR = {
+    'useLineBreaks': 'false',
+    'stylesheets': '["%s","%s"]' % (STATIC_URL + "wysihtml5/css/stylesheet.css",
+                                    STATIC_URL + "css/ckblog.css"),
+}
 
 ###############################################################################
 # DISQUS SETTINGS
