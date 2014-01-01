@@ -288,6 +288,19 @@ samp {
     font-family: "Andale Mono", Consolas, monaco, monospace;
 }
 
+figure {
+    display: inline-block;
+    margin: 0.5em;
+}
+
+figcaption {
+    margin: 0 0 0 0;
+    font-size: smaller;
+    font-weight: normal;
+    text-align: center;
+    color: #222;
+}
+
 .article-social {
     margin: 0.25em 0;
     list-style-type: none;
