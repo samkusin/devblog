@@ -5,7 +5,8 @@
 body {
     font-size: 24pt;
     background-image: none;
-    background-color: #fff;
+    background-color: #222;
+    color: #eee;
 }
 
 .text-list {
@@ -31,15 +32,15 @@ body {
 }
 
 #main-menu li {
-    padding: 0 1em;
+    padding: 1em 1em;
     font-size: 1em;
 }
 
 .blog-post .body p {
-    line-height: 1.5em;
+    line-height: 1.75em;
 }
 
 .blog-post .body li {
-    line-height: 1.25em;
+    line-height: 1.5em;
 }
 
