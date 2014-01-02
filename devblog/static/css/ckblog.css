@@ -3,29 +3,31 @@
 */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     font-size: 11pt;
     width: 100%;
-    background-image: url('/static/img/bkgtile.png');
-    background-repeat: repeat;
-    background-attachment: fixed;
-    padding-bottom: 1em;
-    color: #222;
+    background-color: #16191b;
+    color: #ddd;
 }
 
 a {
     text-decoration: none;
-    color: #366;
-    font-weight: bold;
+    color: #db9607;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #f66;
 }
 
 h1, h2, h3 {
-    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-    font-weight: bold;
+    font-family: 'Armata', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    font-weight: normal;
+    color: #db9607;
 }
 
 .header-title {
-    color: #000;
+    letter-spacing: 0.05em;
 }
 
 .social-button {
@@ -49,26 +51,31 @@ h1, h2, h3 {
     width: 100%;
 }
 
+#banner {
+    background-color: #000;
+}
+
 #banner header {
     max-width: 940px;
     width: 90%;
-    margin: 2em auto;
+    margin: 0 auto;
+    padding: 2em 0;
     text-align: center;
 }
 
 #banner h1 {
-    font-size: 2em;
+    font-size: 2.25em;
     margin: 0.25em 0;
 }
 
 #banner h2 {
-    font-size: 1.1em;
+    font-size: 1.0em;
     font-weight: normal;
     text-transform: uppercase;
 }
 
 footer {
-    margin: 1em auto;
+    margin: 2em auto;
     max-width: 940px;
     width: 90%;
 }
@@ -80,10 +87,8 @@ footer p {
 
 #main-menu {
     width: 100%;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    padding: 0.35em 0;
-    background-color: #1aa;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #444;
 }
 
 #main-menu ul {
@@ -95,31 +100,36 @@ footer p {
 }
 #main-menu li {
     display: inline-block;
-    padding: 0 4em;
-    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    padding: 0.75em 2em;
+    font-family: 'Armata', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
     text-align: center;
     text-transform: uppercase;
-    font-size: 0.9em;
+    font-size: 1em;
+}
+
+#main-menu li.selected {
+   background-color: #16191b; 
 }
 
 #main-menu li a {
-    font-weight: bold;
-    color: #000;
+    font-weight: normal;
+    color: #bbb;
+    padding: 0 2em;
+    letter-spacing: 0.05em;
 }
 
-#main-menu li a.selected {
-    color: #fc6;
+#main-menu li.selected a {
+    color: #eee;
 }
 
 #main-menu li a:hover {
-    color: #fc6;
+    color: #eee;
 }
 
 .main-body {
     max-width: 940px;
     width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1em auto;
     overflow: hidden;
 }
 
@@ -130,6 +140,16 @@ footer p {
 
 #archive-tree {
     margin-left: 0.5em;
+}
+
+ul.jqtree-tree li.jqtree-selected > div,
+ul.jqtree-tree li.jqtree-selected > div:hover {
+    background-color: #888;
+    background: -webkit-gradient(linear, left top, left bottom, from(#888), to(#222));
+    background: -moz-linear-gradient(top, #888, #222);
+    background: -ms-linear-gradient(top, #888, #222);
+    background: -o-linear-gradient(top, #888, #222);
+    text-shadow: 0 1px 0 rgba(171, 118, 0, 0.7);
 }
 
 .sidebar-box {
@@ -146,7 +166,7 @@ footer p {
 .sidebar-box h3 {
     width: 100%;
     padding-bottom: 0.5em;
-    border-bottom: 1px dotted #888;
+    border-bottom: 1px solid #666;
     margin-bottom: 0.5em;
     font-weight: bold;
     font-size: 1em;
@@ -160,6 +180,7 @@ footer p {
 }
 .sidebar-box a {
     font-size: 0.9em;
+    line-height: 1.25em;
 }
 
 .content-body {
@@ -168,8 +189,8 @@ footer p {
 }
 
 .content-body-column {
-    border-left: 1px dotted #888;
-    padding: 0 1em;
+    /*border-left: 1px dotted #888; */
+    padding: 0 1.25em;
 }
 
 .blog-post {
@@ -183,7 +204,7 @@ footer p {
 }
 
 .blog-post .post-time {
-    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    font-family: 'Armata', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
     font-size: 0.9em;
 }
 
@@ -197,11 +218,10 @@ footer p {
 .blog-post .body {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-    line-height: 1.5em;
+    line-height: 1.75em;
 }
 
 .blog-post .body a {
-    color: #960;
     text-decoration: none;
 }
 
@@ -229,7 +249,7 @@ footer p {
 
 .blog-post .body li {
     margin: 0.25em 1em;
-    line-height: 1.25em;
+    line-height: 1.5em;
 }
 
 .blog-post .body blockquote {
@@ -255,18 +275,19 @@ footer p {
 }
 
 .blog-post aside {
-    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    font-family: 'Armata', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
     margin: 1em 0;
     padding: 0.5em 0.75em;
     -moz-border-radius: 0.4em;
     -webkit-border-radius: 0.4em;
     border-radius: 0.4em;
-    background-color: #fc6;
+    background-color: #444;
+    color: #fff;
 }
 
 .blog-post aside p {
     font-size: 0.9em;
-    margin: 0.25em 0;    
+    margin: 0.25em 0; 
 }
 
 pre {
@@ -298,7 +319,7 @@ figcaption {
     font-size: smaller;
     font-weight: normal;
     text-align: center;
-    color: #222;
+    color: #ddd;
 }
 
 .article-social {
