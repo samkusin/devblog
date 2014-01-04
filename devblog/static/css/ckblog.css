@@ -68,9 +68,11 @@ h1, h2, h3 {
     margin: 0.25em 0;
 }
 
-#banner h2 {
+#banner p.subheading {
     font-size: 1.0em;
+    font-family: 'Armata', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
     font-weight: normal;
+    color: #db9607;
     text-transform: uppercase;
 }
 

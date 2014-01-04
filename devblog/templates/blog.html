@@ -31,16 +31,14 @@
                 {% include 'about.html' %}
                 <ul class="social-bar">
                     <li><a href='http://www.feedly.com/home#subscription/feed%2Fhttp%3A%2F%2Fcoderxgamer.com%2Frss'  target='blank'><img id='feedlyFollow' src='http://s3.feedly.com/img/follows/feedly-follow-square-volume_2x.png' alt='follow us in feedly' width='28' height='28'></a></li>
-                    <li><a href="{% url rss-latest %}"><img src="{{STATIC_URL}}img/rss_small.png"/></a></li>
-                    <li><a href="https://twitter.com/samsinx"><img src="{{STATIC_URL}}img/twit_small.png"/></a></li>
+                    <li><a href="{% url rss-latest %}"><img alt="rss" src="{{STATIC_URL}}img/rss_small.png"/></a></li>
+                    <li><a href="https://twitter.com/samsinx"><img alt="twitter" src="{{STATIC_URL}}img/twit_small.png"/></a></li>
                 </ul>
             </article>
         </section>
         <section class="sidebar-box">
             <h3>Archives</h3>
-            <p>
-                <div id="archive-tree"></div>
-            </p>
+            <div id="archive-tree"></div>
         </section>
     {% if blogroll %}
         <section class="sidebar-box">
