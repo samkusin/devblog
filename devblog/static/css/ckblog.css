@@ -285,8 +285,12 @@ ul.jqtree-tree li.jqtree-selected > div:hover {
 }
 
 .blog-post aside {
-    font-size: 0.9em;
     padding: 0.5em 0; 
+}
+
+.blog-post aside p {
+    margin: 0.5em 0;
+    font-size: 1.0em;
 }
 
 pre {
