@@ -1,5 +1,8 @@
 {% extends 'sitebase.html' %}
+
 {% load disqus_tags %}
+{% set_disqus_developer 1 %}
+{% disqus_dev %}
 
 {% block html_head %}
 {% comment %}Google Analytics and Webmaster Tools{% endcomment %}
@@ -75,5 +78,5 @@
     var first_archive_node = $tree.tree('getNodeById', {{ first_post_id }});
     $tree.tree('selectNode', first_archive_node);
 </script>
-{% block blog_script %}{% endblock blog_script %}
+{% block blog_script %}{% disqus_num_replies %}{% endblock blog_script %}
 {% endblock html_body %}

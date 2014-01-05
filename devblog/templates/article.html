@@ -1,5 +1,3 @@
-{% load disqus_tags %}
-
 <div class="blog-post">
     <header class="post-heading">
         <h1><a class="header-title" href="{{ blog_post.get_absolute_url }}">{{blog_post.title}}</a></h1>
@@ -22,7 +20,6 @@
             <a href="{{tag.get_absolute_url}}" rel="category tag">{{ tag }}{%if not forloop.last %}, {% endif %}</a>
         {% endfor %} {% if show_thread_link %}
             <span>&nbsp;&nbsp;-&nbsp;&nbsp;</span><a href="{{ blog_post.get_absolute_url }}#disqus_thread" data-disqus-identifier="{{ blog_post.id }}">Comments</a>
-            {% disqus_num_replies %}
         {% endif %}
         </p>
     </aside>
