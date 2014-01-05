@@ -1,9 +1,9 @@
 <div id="header">
-    <div id="banner">
-        <header>
+    <header>
+        <div id="banner">
             <h1><a class="header-title" href="{% url metablog_home %}">{{ ck_site_title }}</a></h1>
             <p class="subheading">An exploration in Games and Software Development</p>
-        </header>
+        </div>
         <nav id="main-menu">
             <ul>
                 <li {% if not selected_category %} class="selected"{%endif%}><a href="{% url metablog_home %}">Home</a></li>
@@ -12,5 +12,5 @@
             {% endfor %}
             </ul>
         </nav>
-    </div>
+    </header>
 </div>
