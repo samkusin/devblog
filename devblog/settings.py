@@ -20,6 +20,9 @@ CK_METABLOG_PER_PAGE_COUNT = 5
 # Ping google on publishing a post
 CK_METABLOG_PING_GOOGLE = False
 
+# Caching the Site domain to avoid hitting the DB for retrieving our domain
+CK_SITE_DOMAIN = "http://localhost:8000"
+
 
 ###############################################################################
 # Django settings for devblog project.
@@ -127,6 +130,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django_mobile.context_processors.flavour",
     # custom context processors
     "cinekine.context_processors.config",
+    "cinekine.context_processors.site",
 )
 
 MIDDLEWARE_CLASSES = (
@@ -139,7 +143,6 @@ MIDDLEWARE_CLASSES = (
     'django_mobile.middleware.SetFlavourMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
 )
 
 ROOT_URLCONF = 'devblog.urls'
