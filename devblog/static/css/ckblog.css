@@ -49,23 +49,21 @@ h1, h2, h3 {
 
 #header {
     width: 100%;
-}
-
-#banner {
     background-color: #000;
 }
 
-#banner header {
-    max-width: 940px;
-    width: 90%;
+#header header {
     margin: 0 auto;
-    padding: 2em 0;
     text-align: center;
+}
+
+#banner {
+    padding: 2em 0;
 }
 
 #banner h1 {
     font-size: 2.25em;
-    margin: 0.25em 0;
+    padding: 0.25em 0;
 }
 
 #banner p.subheading {
@@ -76,19 +74,18 @@ h1, h2, h3 {
     text-transform: uppercase;
 }
 
-footer {
+.footer {
     margin: 2em auto;
     max-width: 940px;
     width: 90%;
 }
 
-footer p {
+.footer p {
     font-size: 0.9em;
     text-align: center;
 }
 
 #main-menu {
-    width: 100%;
     border-top: 1px solid #444;
     border-bottom: 1px solid #444;
 }
@@ -276,7 +273,7 @@ ul.jqtree-tree li.jqtree-selected > div:hover {
     text-align: right;
 }
 
-.blog-post aside {
+.blog-post footer {
     font-family: 'Armata', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
     margin: 1em 0;
     padding: 0.5em 0.75em;
@@ -287,9 +284,9 @@ ul.jqtree-tree li.jqtree-selected > div:hover {
     color: #fff;
 }
 
-.blog-post aside p {
+.blog-post aside {
     font-size: 0.9em;
-    margin: 0.25em 0; 
+    padding: 0.5em 0; 
 }
 
 pre {

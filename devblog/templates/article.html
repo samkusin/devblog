@@ -3,7 +3,7 @@
 <div class="blog-post">
     <header class="post-heading">
         <h1><a class="header-title" href="{{ blog_post.get_absolute_url }}">{{blog_post.title}}</a></h1>
-        <p class="post-time">{{blog_post.post_date|date:"M dS, Y"}}</p>
+        <time datetime="{{blog_post.post_date|date:'Y-m-d'}}" class="post-time">{{blog_post.post_date|date:"M dS, Y"}}</time>
     </header>
     <div class="body">
     {% if word_count %}
@@ -17,16 +17,18 @@
         {{blog_post.text|safe}}
     {% endif %}
     </div>
-    {% if show_social_link or show_thread_link %}<aside>
-    {% if show_social_link %}
+    <aside>
+        <p>Posted in {% for tag in blog_post.tags.all %}
+            <a href="{{tag.get_absolute_url}}" rel="category tag">{{ tag }}{%if not forloop.last %}, {% endif %}</a>
+        {% endfor %}</p>
+    {% if show_thread_link %}
+        {% disqus_num_replies %}
+    {% endif %}
+    </aside>
+    {% if show_social_link %}<footer>
         <ul class="article-social">
             <li>Posted {{blog_post.post_date|date:"h:i A"}}<li>
             <li><a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ request.build_absolute_uri|urlencode }}{{ blog_post.get_absolute_url }}" data-via="samsinx"></a></li>
         </ul>
-    {% endif %}
-    {% if show_thread_link %}
-        <a class="article-disqus-link" href="{{ blog_post.get_absolute_url }}#disqus_thread" data-disqus-identifier="{{ blog_post.id }}">View comments</a>
-        {% disqus_num_replies %}
-    {% endif %}
-    </aside>{% endif %}
+    </footer>{% endif %}
 </div>

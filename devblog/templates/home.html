@@ -5,7 +5,7 @@
 {% block blog_content %}
     {% for blog_post in blog_posts %}
         <article{% if forloop.last %} class="last-article"{% else %} class="std-article"{% endif %}>
-            {% include 'article.html' with blog_post=blog_post word_count=blog_post.atj_word_count show_thread_link=0 %}
+            {% include 'article.html' with blog_post=blog_post word_count=blog_post.atj_word_count show_thread_link=1 %}
         </article>
     {% endfor %}
     <div class="post-nav">
