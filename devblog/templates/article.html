@@ -16,11 +16,11 @@
     {% endif %}
     </div>
     <aside>
-        <p>Posted in {% for tag in blog_post.tags.all %}
+        <p>{% if show_thread_link %}
+            <a href="{{ blog_post.get_absolute_url }}#disqus_thread">View Comments</a><span>&nbsp;&nbsp;-&nbsp;&nbsp;</span>
+        {% endif %}Posted in {% for tag in blog_post.tags.all %}
             <a href="{{tag.get_absolute_url}}" rel="category tag">{{ tag }}{%if not forloop.last %}, {% endif %}</a>
-        {% endfor %} {% if show_thread_link %}
-            <span>&nbsp;&nbsp;-&nbsp;&nbsp;</span><a href="{{ blog_post.get_absolute_url }}#disqus_thread">Comments</a>
-        {% endif %}
+        {% endfor %}
         </p>
     </aside>
     {% if show_social_link %}<footer>
