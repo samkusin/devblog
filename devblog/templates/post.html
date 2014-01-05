@@ -1,10 +1,14 @@
 {% extends 'blog.html' %}
-{% block site_title %}{{blog_post.title}} - {{page_title}}{% endblock site_title %}
-{% block html_meta %}<meta name="description" content="{{blog_post.description}}">{% endblock html_meta %}
+
 {% load disqus_tags %}
+{% set_disqus_developer 1 %}
+{% disqus_dev %}
 {% set_disqus_identifier blog_post.id %}
 {% set_disqus_url blog_post.get_absolute_url %}
 {% set_disqus_title blog_post.title %}
+
+{% block site_title %}{{blog_post.title}} - {{page_title}}{% endblock site_title %}
+{% block html_meta %}<meta name="description" content="{{blog_post.description}}">{% endblock html_meta %}
 {% block blog_content %}
     <article class="std-article">
         {% include 'article.html' with blog_post=blog_post show_social_link=1 %}
