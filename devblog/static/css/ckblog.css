@@ -350,3 +350,13 @@ figcaption {
 .prev-post-link {
     float: right;
 }
+
+.wysiwyg-text-align-left { text-align: left }
+.wysiwyg-text-align-center { text-align: center }
+.wysiwyg-text-align-right { text-align: right }
+
+.wysiwyg-float-left { float: left }
+.wysiwyg-float-right { float: right }
+
+img.wysiwyg-float-left { margin: 10px 20px 10px 0 }
+img.wysiwyg-float-right { margin: 10px 0 20px 10px }
