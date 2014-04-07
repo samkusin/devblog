@@ -12,6 +12,7 @@
 /local
 /media
 /static
+/devblog/settings.py
 .DS_Store
 .sublime-project
 .sublime-workspace
